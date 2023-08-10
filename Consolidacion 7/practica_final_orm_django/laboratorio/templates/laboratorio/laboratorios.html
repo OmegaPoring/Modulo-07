@@ -1,0 +1,28 @@
+<div class="row">
+    <h1>Informacion de Laboratorios</h1>
+    <table border="1">
+    <tr>
+    <td>Nombre</td>
+    <td>Ciudad</td>
+    <td>Pais</td>
+    <td>Edit</td>
+    <td>Delete</td>
+    </tr>
+
+    {% for lab in laboratorios %}
+    <tr>
+    <td>{{ lab.name }}</td>
+    <td>{{ lab.city }}</td>
+    <td>{{ lab.country }}</td>
+    <td><a href="actualizar/{{ lab.id }}">Actualizar</a></td>
+    <td><a href="confirmar/{{ lab.id }}">Eliminar</a></td>
+    </tr>
+    {% endfor %}
+    </table>
+    <br>
+    <a href="agregar/">Agregar un Laboratorio</a>
+    <br>
+    <p>¿Informacion de los laboratorios?</p>
+
+    <a href="/"><-- Ir a la pagina de inicio</a>
+</div>

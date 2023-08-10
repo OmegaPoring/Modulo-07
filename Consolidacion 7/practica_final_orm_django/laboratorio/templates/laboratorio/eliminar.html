@@ -1,0 +1,9 @@
+<h2>Estas seguro que deseas eliminar el {{laboratorio.name}}?</h2>
+
+<a href="/laboratorios/"><--- Volver</a>
+
+<form action="/laboratorios/eliminar/{{laboratorio.id}}/" method="post">
+    {% csrf_token %}
+    <br>
+    <input type="submit" value="Confirmar">
+   </form>

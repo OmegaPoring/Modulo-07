@@ -1,0 +1,22 @@
+from laboratorio.models import Laboratorio, DirectorGeneral, Producto
+
+#Obtenga todos los objetos tanto Laboratorio, DirectorGeneral y Productos.
+laboratorio = Laboratorio.objects.all()
+director_general = DirectorGeneral.objects.all()
+producto = Producto.objects.all()
+laboratorio
+director_general
+producto
+
+#Obtenga el laboratorio del Producto cuyo nombre es ‘Producto 1’.
+filtrado = Producto.objects.filter(name="Producto 1")
+filtrado[0].laboratorio
+
+#Ordene todos los productos por nombre, y que muestre los valores de nombre y 
+laboratorio.
+productos_ordenados = Producto.objects.order_by("name").values("name", "laboratorio__name")
+productos_ordenados
+
+#Realice una consulta que imprima por pantalla los laboratorios de todos los productos.
+productos_lab = Producto.objects.values("laboratorio__name")
+productos_lab

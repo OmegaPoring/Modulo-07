@@ -1,0 +1,14 @@
+<h1>Actualizar Laboratorio</h1>
+<form action="/laboratorios/actualizar/{{laboratorio.id}}/" method="post">
+ {% csrf_token %}
+ Nombre:<br>
+ <input name="name" value="{{laboratorio.name}}">
+ <br><br>
+ Ciudad:<br>
+ <input name="city" value="{{laboratorio.city}}">
+ <br><br>
+ País:<br>
+ <input name="country" value="{{laboratorio.country}}">
+ <br><br>
+ <input type="submit" value="Actualizar">
+</form>

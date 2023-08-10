@@ -1,0 +1,14 @@
+<h1>Ingresar los datos del Laboratorio</h1>
+<form action="/laboratorios/agregar/" method="post">
+ {% csrf_token %}
+ Nombre:<br>
+ <input name="name">
+ <br><br>
+ Ciudad:<br>
+ <input name="city">
+ <br><br>
+ País:<br>
+ <input name="country">
+ <br><br>
+ <input type="submit" value="Agregar">
+</form>
